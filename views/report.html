@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - Inventory Report</title>
+    <link rel="stylesheet" href="../styles/base.min.css">
+</head>
+<body>
+    <h1>Report Free Space</h1>
+    <a href="../index.html" id="main-link" class="hidden"></a>
+    <p id="none-message">No free space logged</p>
+    <div id="locations"></div>
+    <input type="text" oninput="back(this)"/>
+</body>
+<script src="../scripts/main.js"></script>
+<script>
+    var link = document.querySelector("#main-link");
+    var input = document.querySelector("input");
+    input.focus();
+
+    function back(el) {
+        if (el.value === "e") link.click();
+    }
+
+    report();
+</script>
+</html>

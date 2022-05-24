@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main - Inventory Report</title>
+    <link rel="stylesheet" href="./styles/base.min.css">
+</head>
+<body>
+    <h1>Main Menu</h1>
+
+    <div>
+        <a href="./views/log.html" id="log-link" class="hidden"></a>    
+        <a href="./views/report.html" id="report-link" class="hidden"></a>
+    </div>
+
+    <div>
+        <p><span class="menu-item menu-item--number">1. </span><span class="menu-item menu-item--command">Log Free Space</span></p>
+        <p><span class="menu-item menu-item--number">2. </span><span class="menu-item menu-item--command">Report Free Space</span></p>
+        <p><span class="menu-item menu-item--number">3. </span><span class="menu-item menu-item--command">Clear Report</span></p>
+    </div>
+
+    <p class="error-message hidden"></p>
+    <input type="text" id="commandInput" oninput="changeMenu(this)"/>
+</body>
+<script type="text/javascript">
+    function init() {
+        var input = document.querySelector("input#commandInput");
+        input.value = "";
+        input.focus();
+    }
+
+    window.onload = init;
+</script>    
+<script src="./scripts/main.js"></script>
+</html>

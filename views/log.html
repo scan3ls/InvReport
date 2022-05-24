@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log - Inventory Report</title>
+    <link rel="stylesheet" href="../styles/base.min.css">
+</head>
+<body>
+    <a href="../index.html" id="main-link" class="hidden"></a>
+    <h1>Log Free Space</h1>
+    <p>Scan Location: </p>
+    <input type="text" id="bin" oninput="processInput(this)">
+    <script src="../scripts/main.js"></script>
+    <script>
+        document.querySelector("input#bin").focus();
+    </script>
+</body>
+</html>
